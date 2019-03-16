@@ -1,0 +1,14 @@
+17-03-2019
+
+Sprint 1:
+
+1.Sign up Functionality has been Added.
+2.Chat Room Function has been Added.
+3.Login Function is in progress.
+4.Session Validations needs to be taken care.
+
+
+Sprint 2:
+
+
+1.
