@@ -37,21 +37,19 @@ public class submit extends HttpServlet {
 		// TODO Auto-generated method stub
 	
 		HttpSession session = request.getSession();
+		if(session == null){
+			response.sendRedirect(".#!/login");
+		}
 		userBean beeen=new userBean();
 		beeen=(userBean) session.getAttribute("user");
 		int gen=Integer.parseInt((String) session.getAttribute("otp"));
-		int userEnter=Integer.parseInt(request.getParameter("otp_user"));
-		
-
-		if(session == null){
-			response.sendRedirect(".#!/signup");
-		}
+		int userEnter=Integer.parseInt(request.getParameter("otp_user"));	
 		if (gen == userEnter)
 		{
 			dao f = new dao();
 			try {
 				if (f.signup(beeen) == 1) {
-					
+					session.invalidate();
 					response.sendRedirect("success.jsp");
 				}
 				else

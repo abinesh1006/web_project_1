@@ -1,5 +1,5 @@
-<div class="col-md-4 col-md-offset-3">
-    <h2>Login</h2>
+<div class="col-md-4 col-md-offset-2">
+    <h3>Login</h3>
     <form name="form" ng-submit="vm.login()" role="form">
         <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required || form.username.$invalid && form.username.$touched }">
             <label for="username">Username</label>

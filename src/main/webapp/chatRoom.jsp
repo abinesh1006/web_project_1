@@ -94,7 +94,7 @@
 <body>
 
 
-<% HttpSession session2 = request.getSession(false); %>
+ <% HttpSession session2 = request.getSession(false); %>
 <% if(null!=session2.getAttribute("userSession")){
   String name= session2.getAttribute("firstName").toString();
      request.setAttribute("name", name);
@@ -102,7 +102,7 @@
 else{
     response.sendRedirect(".#!/login");
     }
-%>
+%> 
 
   <div class="input-area">
     <textarea rows="1" cols="2" placeholder="Hi <%=request.getAttribute("name") %>, Say Something.."></textarea>
