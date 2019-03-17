@@ -16,7 +16,7 @@
 <body>
 <% session = request.getSession(false) ;%>
 <% if(null==session.getAttribute("signup")){
-	response.sendRedirect(".#!/signup");   
+	response.sendRedirect("error.jsp");  
     }
 	
 %>

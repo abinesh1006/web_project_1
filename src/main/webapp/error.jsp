@@ -7,7 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-Failed operation.
+<% if(null==session.getAttribute("error_message")){%>
+<h1><b>You are Not authorised to view this Page<b><h1><% }else{%>
+<%=session.getAttribute("error_message") %>
+<%} %>
+
+
+<% session.invalidate(); %>
 
 </body>
 </html>
