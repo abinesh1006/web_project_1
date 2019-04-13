@@ -11,7 +11,7 @@
 
 .middle {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -24,32 +24,29 @@ hr {
 </style>
 <body>
 
-<div class="bgimg">
   
   <div class="middle">
     <h1>COMING SOON</h1>
     <hr>
-    <p id="demo" style="font-size:30px"></p>
+    <p id="demo" style="font-size:25px"></p>
   </div>
-  
-
-
-<script>
-var chatovodOnLoad = chatovodOnLoad || [];
-chatovodOnLoad.push(function() {
-    chatovod.addChatButton({host: "funnier.chatovod.com", align: "bottomRight",
-        width: 400, height: 300, defaultLanguage: "en"});
-});
-(function() {
-    var po = document.createElement('script');
-    po.type = 'text/javascript'; po.charset = "UTF-8"; po.async = true;
-    po.src = (document.location.protocol=='https:'?'https:':'http:') + '//st1.chatovod.com/api/js/v1.js?2';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-})();
-
+<header class="header" id="header">
+		<!--header-start-->
+	
+		<div class="container">
+		
+			<figure class="logo animated fadeInDown delay-07s">
+			</figure>
+			<h1 class="animated fadeInDown delay-07s">Welcome To the new World</h1>
+			<ul class="we-create animated fadeInUp delay-1s">
+				<li>Everything starts with Small Steps.......</li>
+			</ul>
+			<a class="link animated fadeInUp delay-1s servicelink" href="#service">Get Started</a>
+		</div>
+	</header>
+<script type="text/javascript">
 // Set the date we're counting down to
-var countDownDate = new Date("Apr 5, 2019 18:00:00").getTime();
+var countDownDate = new Date("Apr 20, 2019 18:00:00").getTime();
 
 // Update the count down every 1 second
 var countdownfunction = setInterval(function() {

@@ -1,1 +1,2 @@
-create table Employee (emp_id Number(30) primary key, name varchar(20),age int, status varchar(30),stream varchar(30));
+create table user (email VARCHAR(30) primary key, firstname varchar(20),lastName varchar(20), mobileNumber bigint(30),stream varchar(32));
+INSERT INTO `user` (`email`, `firstname`, `lastName`, `mobileNumber`, `password`) VALUES ('qa@gmail.com', 'abiemnsh', 'subramani', '789456125', '12345678');

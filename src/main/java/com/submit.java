@@ -38,7 +38,7 @@ public class submit extends HttpServlet {
 	
 		HttpSession session = request.getSession();
 		if(session == null){
-			response.sendRedirect(".#!/login");
+			response.sendRedirect(".#!login");
 		}
 		userBean beeen=new userBean();
 		beeen=(userBean) session.getAttribute("user");
@@ -50,14 +50,12 @@ public class submit extends HttpServlet {
 			try {
 				if (f.signup(beeen) == 1) {
 					session.invalidate();
-					response.sendRedirect("success.jsp");
+					response.sendRedirect(".#!success");
 				}
 				else
 				{
 					session.invalidate();
-					response.sendRedirect("error.jsp");
-					
-					
+					response.sendRedirect(".#!error");
 				}
 
 			} catch (ClassNotFoundException e) {
@@ -66,14 +64,14 @@ public class submit extends HttpServlet {
 			} catch (SQLException e) {
 				e.printStackTrace();
 				// TODO Auto-generated catch block
-				response.sendRedirect("error.jsp");
+				response.sendRedirect(".#!error");
 			}
 
 		}
 		else
 		{
 			session.setAttribute("message","OTP IS INCORRECT");
-			response.sendRedirect("./otp.jsp");
+			response.sendRedirect(".#!/otp");
 		}
 		
 	}

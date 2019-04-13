@@ -28,7 +28,7 @@
 				<div class="form-group"
 					ng-class="{ 'has-error': form.otp_user.$dirty && form.otp_user.$error.required || form.otp_user.$invalid && form.otp_user.$touched}">
 
-					<label for="otp_user">Pleaase enter the otp </label>
+					<label for="otp_user">Please enter the otp </label>
 					<input type="number"
 						pattern="\d+" name="otp_user" id="otp_user" class="form-control"
 						ng-model="otp_user" ng-minlength="6" required /> <span
@@ -39,7 +39,6 @@
 			</form>
 		</center>
 	</div>
-	<jsp:include page="footer.jsp"/>
 	<script>
     
 	var otpapp = angular.module("otpapp", []);

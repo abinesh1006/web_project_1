@@ -12,9 +12,6 @@
 </head>
 <body>
 	<h1>Account has been Created Successfully</h1>
-	
-
 	<button onclick="location.href = '.#!login'" id="myButton">Click Here to login </button>
-	<jsp:include page="footer.jsp"/>
 </body>
 </html>

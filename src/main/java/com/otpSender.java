@@ -15,7 +15,7 @@ public class otpSender {
 	public static void sendmail(int otp) {
 
 		final String username = "abineshsiva191@gmail.com";
-		final String password = "123abc.D";
+		final String password = "123456abc.Dd";
 
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");

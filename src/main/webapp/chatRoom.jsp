@@ -1,103 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ page import="com.userBean"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <style>
-    html {
-      height: 100%;
-    }
-    body {
-      margin: 0;
-      padding: 0 5px;
-      display: flex;
-      align-items: right;
-      flex-direction: column;
-      background: rgba(99,99,191,.07);
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .input-area {
-      display: flex;
-      flex-direction: column;
-      border-bottom: 1px solid rgba(99,99,191,0.25);
-      padding-bottom: 5px;
-      margin-bottom: 5px;
-      width: 50%;
-      max-width: 700px;
-    }
-    textarea {
-      background: white;
-      margin-bottom: 5px;
-      padding: 10px;
-      font-size: 15px;
-      border-radius: 12px;
-      border: none;
-      outline: none;
-      border-bottom: 3px solid rgba(99,99,191,0.25);
-      resize: none;
-      flex-shrink: 0;
-    }
-   button {
-      padding: 5px;
-      background: white;
-      border: none;
-      font-size: 17px;
-      border-radius: 12px;
-      cursor: pointer;
-      outline: none;
-      border-bottom: 3px solid rgba(99,99,191,0.25);
-      flex-shrink: 0;
-    }
-   button:hover {
-      background: rgba(99, 99, 191, 0.06);
-    }
-   button:active {
-      background: rgba(99, 99, 191, 0.10);
-    }
-    .submit{
-     padding: 5px;
-      background: white;
-      border: none;
-      font-size: 17px;
-      border-radius: 12px;
-      cursor: pointer;
-      outline: none;
-      border-bottom: 3px solid rgba(99,99,191,0.25);
-      flex-shrink: 0;
-    }
-    .submit:active{
-    	 background: rgba(99, 99, 191, 0.10);
-    }
-    .info {
-      margin: 5px;
-      color: #6363bf;
-    }
-    .feed {
-      width: 50%;
-      max-width: 700px;
-    }
-    .feed-item {
-      background: white;
-      margin-bottom: 5px;
-      padding: 5px;
-      font-size: 15px;
-      border-radius: 12px;
-      color: black;
-      border-bottom: 3px solid rgba(99,99,191,0.25);
-      
-      line-height: 1;
-    }
-  </style>
+ <link href="mystyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-
- <% HttpSession session2 = request.getSession(false); %>
-<% if(null!=session2.getAttribute("userSession")){
-  String name= session2.getAttribute("firstName").toString();
-     request.setAttribute("name", name);
+<% if(null!=session.getAttribute("userSession")){
+  userBean name= (userBean)session.getAttribute("login_user");
+     request.setAttribute("name", name.getFirstName());
     }
 else{
     response.sendRedirect(".#!/login");

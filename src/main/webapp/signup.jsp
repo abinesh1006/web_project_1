@@ -1,4 +1,6 @@
-	<div class="col-md-4 col-md-offset-2">
+	<div class="_forms_" id="_forms_">
+	<div class="container">
+	<div class="col-md-4 col-md-offset-1">
     <h3>Signup</h3>
     <form name="form" ng-submit="signupfun(vm);" role="form" action="Servlet1" method="post">
         <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required || form.username.$invalid && form.username.$touched }">
@@ -27,9 +29,12 @@
             <label for="password">Password</label><input type="password" name="password" id="password" class="form-control" ng-model="vm.password" ng-minlength="6" required />
             <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
         </div>
+        <input type="hidden" name="action" value="Register"/>
         <div class="form-actions">
             <button type="submit"  class="btn btn-primary">Register</button>
             <a href="#!/login" class="btn btn-link">Login</a>
         </div>
     </form>
 </div> 
+</div>
+</div>

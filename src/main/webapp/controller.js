@@ -24,8 +24,19 @@ app.config(function($routeProvider) {
         	controller:'otpcontroller'
    
     })
+    .when("/success", {
+        templateUrl : "success.jsp",
+        	controller:'sController'
+   
+    })
+      .when("/error", {
+        templateUrl : "otp.jsp",
+        	controller:'errController'
+   
+    })
     .when("/chatRoom",{
-    	templateUrl : "chatRoom.html"
+    	templateUrl : "chatRoom.jsp",
+    		controller:'chatController'
     		
     });
     
@@ -33,6 +44,7 @@ app.config(function($routeProvider) {
  app.controller('loginController', function($scope) {
     $scope.username = "";
     $scope.password = "";
+    
 });
  
  app.controller('signUpController', function($scope) {
@@ -53,10 +65,6 @@ app.config(function($routeProvider) {
 	    	});
 	    	}
 	});
- 
- 
- 
- 
  
  
  app.directive('myDirective', function() {
