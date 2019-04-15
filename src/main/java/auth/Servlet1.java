@@ -1,4 +1,4 @@
-package com;
+package auth;
 
 import java.io.IOException;
 import java.io.FileInputStream;
@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import bean.userBean;
+import services.dao;
 
 /**
  * Servlet implementation class Servlet1
@@ -75,7 +78,6 @@ public class Servlet1 extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 			Random rand = new Random();
 			int otp1 = 1054360 + rand.nextInt(900000);
 			otpSender.sendmail(otp1);
@@ -114,7 +116,7 @@ public class Servlet1 extends HttpServlet {
 						HttpSession session = request.getSession();
 						session.setAttribute("login_user", be);
 						session.setAttribute("userSession", "true");
-						response.sendRedirect(".#!/index");
+						response.sendRedirect(".#!/home");
 						
 			
 					}

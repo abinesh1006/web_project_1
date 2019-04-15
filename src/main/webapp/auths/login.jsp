@@ -1,7 +1,8 @@
 <div class="_forms_" id="_forms_">
 <div class="container">
 <div class="col-md-4 col-md-offset-1" >
-	<h3>Login</h3>
+	<h3 style="color:white;">Login</h3>
+	<br>
 	<%if(null!=session.getAttribute("login_messgae")){ %>
 	<%=session.getAttribute("login_messgae") %>
 	<%session.invalidate(); %>
@@ -38,6 +39,13 @@
 </div>
 </div>
 </div>
+<script>
+
+
+	  $("html, body").animate({ scrollTop: 0 }, "slow");
+	 
+
+</script>
 <!-- <style type="text/css">
   .css-form input.ng-invalid.ng-touched {
     background-color: #FA787E;

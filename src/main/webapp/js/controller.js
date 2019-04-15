@@ -2,35 +2,45 @@
  * 
  */
 var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
+app.constant("baseUrl","http://localhost.8090");
+app.config(function($routeProvider,$locationProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "home.jsp"
     })
     .when("/login", {
-        templateUrl : "login.jsp",
+        templateUrl : "auths/login.jsp",
         	controller: 'loginController'
        
     })
     .when("/signup", {
-        templateUrl : "signup.jsp",
+        templateUrl : "auths/signup.jsp",
         	controller: 'signUpController'
+    })
+     .when("survey", {
+        templateUrl : "survey/survey.jsp",
+        	controller: 'surveyController'
     })
     .when("/home", {
         templateUrl : "home.jsp"
     })
+    .when("/profile", {
+        templateUrl : "profile.jsp",
+        	controller: 'profileController'
+       
+    })
     .when("/otp", {
-        templateUrl : "otp.jsp",
+        templateUrl : "auths/otp.jsp",
         	controller:'otpcontroller'
    
     })
     .when("/success", {
-        templateUrl : "success.jsp",
+        templateUrl : "auths/success.jsp",
         	controller:'sController'
    
     })
       .when("/error", {
-        templateUrl : "otp.jsp",
+        templateUrl : "auth/error.jsp",
         	controller:'errController'
    
     })

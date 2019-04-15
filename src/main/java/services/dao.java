@@ -1,4 +1,4 @@
-package com;
+package services;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -7,6 +7,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import bean.userBean;
+import db.DbConnection;
 
 public class dao {
 	public int signup(userBean be) throws ClassNotFoundException, SQLException {

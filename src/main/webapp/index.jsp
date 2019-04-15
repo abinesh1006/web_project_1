@@ -43,15 +43,23 @@
 				<li><a href="#header">Home</a></li>
 				<li><a href="#service">Portfolios</a></li>
 				<li><a href="#Portfolio">Services</a></li>
-				<li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
+				<li class="small-logo"><a href="#div_check" onclick="window.open('#!profile','_self');"><img src="img/small-logo.png" alt=""></a></li>
 				<li><a href="#client">Go-Premium</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="#!login">Login</a></li>
+				
+				<%if(null!=session.getAttribute("userSession")){ %>
+				<li><a href="#contact">contact</a></li>
+				<li><a href="<%=request.getContextPath() %>/logout"><span
+						class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+				<%}else{%>
+				<li><a href="#div_check" onclick="window.open('.#!signup','_self');">Register</a></li>
+				<li><a href="#div_check" onclick="window.open('.#!login','_self');">Login</a></li>
+				
+						<%} %>
 			</ul>
 			<a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
 		</div>
 	</nav>
-	<div ng-view></div>
+	<div id="div_check" ng-view></div>
 	
 	
 	<!--header-end-->
@@ -245,13 +253,13 @@
 						<span>Karapakkam<br>Chennai</span>
 					</div>
 					<div class="contact-info-box phone clearfix">
-						<h3><i class="fa fa-phone"></i><a href="tel:95976332876"> Call Us</a></h3>
-						<a href="tel:95976332876"><span>9597632876</span></a>
+						<h3><i class="fa fa-phone"></i><a style="color:black;" href="tel:95976332876"> Call Us</a></h3>
+						<a style="color:black;" href="tel:95976332876"><span>9597632876</span></a>
 						
 					</div>
 					<div class="contact-info-box email clearfix">
-						<h3><i class="fa fa-pencil"></i><a href="mailto:abineshsiva191@gmail.com">email:</a></h3>
-						<a href="mailto:abineshsiva191@gmail.com"><span>abineshsiva191@gmail.com</span></a>
+						<h3><i class="fa fa-pencil"></i><a style="color:black;" href="mailto:abineshsiva191@gmail.com">email:</a></h3>
+						<a style="color:black;" href="mailto:abineshsiva191@gmail.com"><span>abineshsiva191@gmail.com</span></a>
 						
 					</div>
 					<ul class="social-link">
@@ -261,6 +269,7 @@
 						<li class="gplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
 						
 					</ul>
+					<a href="chat/chatRoom.jsp">Chatrrom</a> 
 				</div>
 				<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
 					<div class="form">
@@ -451,7 +460,7 @@
 		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
 		crossorigin="anonymous"></script>
 	<script src='https://cdn.scaledrone.com/scaledrone.min.js' type='text/javascript'></script>
-	<script src="controller.js" type="text/javascript"></script>
+	<script src="js/controller.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>

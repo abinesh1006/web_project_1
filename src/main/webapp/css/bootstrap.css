@@ -283,9 +283,11 @@ a {
   color: #dcdfe2;
   text-decoration: none;
 }
+
 a:hover,
 a:focus {
-  color: #dcdfe2;;
+  color: #dcdfe2;
+  background-color:#00000;
   text-decoration: underline;
 }
 a:focus {
@@ -3430,7 +3432,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #fbf7f7;
+  color: black;
 }
 .nav > li.disabled > a {
   color: #999999;

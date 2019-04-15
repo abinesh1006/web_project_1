@@ -1,7 +1,11 @@
 	<div class="_forms_" id="_forms_">
 	<div class="container">
 	<div class="col-md-4 col-md-offset-1">
-    <h3>Signup</h3>
+    <h3 style="color:white;">Signup</h3>
+    <%if(null!=session.getAttribute("messgae")){ %>
+	<%=session.getAttribute("messgae") %>
+	<%session.invalidate(); %>
+	<%} %><br>
     <form name="form" ng-submit="signupfun(vm);" role="form" action="Servlet1" method="post">
         <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required || form.username.$invalid && form.username.$touched }">
             <label for="firstName">first name</label>

@@ -1,4 +1,4 @@
-package com;
+package auth;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -9,11 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import bean.userBean;
+import services.dao;
+
 /**
  * Servlet implementation class submit
  */
 public class submit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static  int Count = 0;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -70,8 +74,16 @@ public class submit extends HttpServlet {
 		}
 		else
 		{
+			if(Count<3){
 			session.setAttribute("message","OTP IS INCORRECT");
 			response.sendRedirect(".#!/otp");
+			Count++;
+			}
+			else
+			{
+				session.setAttribute("messgae","OTP Verification Failed....");
+				response.sendRedirect(".#!/signup");
+			}
 		}
 		
 	}

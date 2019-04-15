@@ -1,4 +1,4 @@
-package com;
+package bean;
 
 public class userBean {
 	private String firstName;
@@ -50,9 +50,5 @@ public class userBean {
 		this.password = password;
 	}
 	
-
-	
-
-
 	
 }

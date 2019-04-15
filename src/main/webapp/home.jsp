@@ -1,4 +1,4 @@
-
+<%@ page import="bean.userBean"%>
 <style>
 
 
@@ -25,25 +25,38 @@ hr {
 <body>
 
   
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p id="demo" style="font-size:25px"></p>
-  </div>
+ 
+    
+  
+  <div>
+
 <header class="header" id="header">
 		<!--header-start-->
 	
 		<div class="container">
-		
+		 <div class="middle">
+		<h1>COMING SOON</h1>
+    <hr>
+    <br>
+    <p id="demo" style="font-size:25px"></p>
+    </div>
+		  <%if(null!=session.getAttribute("userSession")){ 
+		  userBean beeen=new userBean();
+		beeen=(userBean) session.getAttribute("login_user"); %>
+	<h1>Hi <%=beeen.getFirstName()%></h1>
+	
+	<%} else{%>
 			<figure class="logo animated fadeInDown delay-07s">
 			</figure>
-			<h1 class="animated fadeInDown delay-07s">Welcome To the new World</h1>
+			<h1 class="animated fadeInDown delay-07s">Welcome Here</h1>
 			<ul class="we-create animated fadeInUp delay-1s">
 				<li>Everything starts with Small Steps.......</li>
 			</ul>
-			<a class="link animated fadeInUp delay-1s servicelink" href="#service">Get Started</a>
+			<a class="link animated fadeInUp delay-1s servicelink" href=".#!survey">Get Started</a>
+			<%} %>
 		</div>
 	</header>
+	</div>
 <script type="text/javascript">
 // Set the date we're counting down to
 var countDownDate = new Date("Apr 20, 2019 18:00:00").getTime();

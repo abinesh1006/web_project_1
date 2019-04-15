@@ -1,7 +1,7 @@
-package com;
+package auth;
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class viewServlet
+ * Servlet implementation class logout
  */
-public class viewServlet extends HttpServlet {
+public class logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public viewServlet() {
+    public logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,6 +28,10 @@ public class viewServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		HttpSession session=request.getSession();  
+		session.invalidate();
+		response.sendRedirect(".#!/login");
 	}
 
 	/**
@@ -35,10 +39,18 @@ public class viewServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int id=Integer.parseInt(request.getParameter("employeeNumber"));
-		//HttpSession ses =request.getSession();
-		dao view=new dao();
-		userBean be=null;
+		  response.setContentType("text/html");  
+          PrintWriter out=response.getWriter();  
+            
+        
+          HttpSession session=request.getSession();  
+          session.invalidate();  
+            
+          out.print("You are successfully logged out!");  
+          response.sendRedirect(".#!/login");
+          
+          out.close();  
+           
+  }  
 	}
 
-}

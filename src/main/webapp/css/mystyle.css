@@ -23,6 +23,10 @@ input,textarea:focus{
 .btn-primary:disabled:hover {
 	background-color: red;
 }
+.link_custom
+{
+	color: #000000;
+}
 .btn-primary
 {
 	 	width:100px;
@@ -40,7 +44,7 @@ input,textarea:focus{
 .btn-primary:hover
 {
 	    color: #ffffff;
-    background-color: #39f314;
+    background-color: #7cc576;
     border-color: #285e8e;
 }
 .navbar-fixed-bottom {

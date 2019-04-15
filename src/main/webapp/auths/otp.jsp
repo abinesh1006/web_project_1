@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page import="com.userBean"%>
+<%@ page import="bean.userBean"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,7 +20,6 @@
     }
 	
 %>
-<%@ include file="header.jsp" %>
 <%=session.getAttribute("message") %>
 	<div ng-app="otpapp" ng-controller="otpcontroller">
 		<center>
