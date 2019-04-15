@@ -1,14 +1,21 @@
-17-03-2019
 
-Sprint 1:
 
 1.Sign up Functionality has been Added.
 2.Chat Room Function has been Added.
 3.Login Function is in progress.
 4.Session Validations needs to be taken care.
 
+update as on 16-4
+Done:
+Login function.
+Signup with basic details.
+Otp verification during signup.
+Session Validations Completed.
 
-Sprint 2:
+InProgress:
+1.Filter Creation for all Session Mapping  Estimation: 2 days (Wedesday 18)
+2.Working on Survey Based Signup Model (Without CSS,1 week)
+3.Provide Admin Account Status and able to Select the survey for the users.(1 week)
+4.Add Five test pics and display it Based on User Preferece once Survey is completed.(2 days)
 
-
-1.
+ETA for next Commit With Above 4 fuction : 2 Weeks 
